@@ -2,7 +2,7 @@
 
 public class zoom : MonoBehaviour
 {
-	public float zoomSpeed = 0.3f;        // The rate of change of the field of view in perspective mode.
+	public float zoomSpeed = 0.075f;        // The rate of change of the field of view in perspective mode.
 
 	void Update()
 	{
@@ -22,11 +22,12 @@ public class zoom : MonoBehaviour
 			float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
 
 			// Find the difference in the distances between each frame.
-			float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
-			if (transform.position.y + deltaMagnitudeDiff * .5f > 0) {
-				transform.localPosition += new Vector3 (-deltaMagnitudeDiff * .5f * zoomSpeed, deltaMagnitudeDiff * .5f * zoomSpeed, 0);
+			float changeby = (prevTouchDeltaMag - touchDeltaMag) * zoomSpeed;
+
+			if (transform.position.y + changeby > 5) {
+				transform.localPosition += new Vector3 (changeby * -0.7f,changeby,changeby * -0.7f);
 			} else {
-				transform.localPosition = new Vector3 (-4f, 0f, -4f);
+				transform.localPosition = new Vector3 (-4f, 5f, -4f);
 			}
 		}
 	}
