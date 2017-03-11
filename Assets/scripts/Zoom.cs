@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 
-public class zoom : MonoBehaviour
+public class Zoom : MonoBehaviour
 {
 	public float zoomSpeed = 0.075f;        // The rate of change of the field of view in perspective mode.
 

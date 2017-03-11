@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class loader : MonoBehaviour {
+public class Loader : MonoBehaviour {
 	public UnityEngine.UI.Button button;
 
 	void Start(){
