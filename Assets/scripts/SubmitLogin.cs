@@ -35,11 +35,14 @@ public class SubmitLogin : MonoBehaviour {
 		SendData ();
 	}
 
-	void SendData ()
+	IEnumerator SendData ()
 	{
 		WWWForm data = new WWWForm();
 		data.AddField("cmd", "{\"id\":1,\"username\":\"" + username + "\",\"password\":\"" + password + "\",\"email\":\"" + email + "\"}");
 		string url = "https://parkermc.ddns.net/RA1/server/cmd.php";
 		WWW www = new WWW(url, data);
+		yield return www;
+		string json = www.text;
+
 	}
 }
