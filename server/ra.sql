@@ -48,6 +48,10 @@ CREATE TABLE `villages` (
   `iron` int(11) NOT NULL,
   `rock` int(11) NOT NULL,
   `wood` int(11) NOT NULL,
+  `maxFood` int(11) NOT NULL,
+  `maxIron` int(11) NOT NULL,
+  `maxRock` int(11) NOT NULL,
+  `maxWood` int(11) NOT NULL,
   `world` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -75,7 +79,7 @@ ALTER TABLE `villages`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
