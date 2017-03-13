@@ -39,7 +39,7 @@ public class SubmitLogin : MonoBehaviour {
 	{
 		WWWForm data = new WWWForm();
 		data.AddField("cmd", "{\"id\":1,\"username\":\"" + username + "\",\"password\":\"" + password + "\",\"email\":\"" + email + "\"}");
-		string url = "";
+		string url = "https://parkermc.ddns.net/RA1/server/cmd.php";
 		WWW www = new WWW(url, data);
 	}
 }

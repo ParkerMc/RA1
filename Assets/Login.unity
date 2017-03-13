@@ -557,6 +557,26 @@ Prefab:
       propertyPath: m_Text
       value: 'Password:'
       objectReference: {fileID: 0}
+    - target: {fileID: 114511635998334154, guid: d5e3928c2107c41cda92709aeb7d41cd,
+        type: 2}
+      propertyPath: m_ContentType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511635998334154, guid: d5e3928c2107c41cda92709aeb7d41cd,
+        type: 2}
+      propertyPath: m_KeyboardType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511635998334154, guid: d5e3928c2107c41cda92709aeb7d41cd,
+        type: 2}
+      propertyPath: m_CharacterValidation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511635998334154, guid: d5e3928c2107c41cda92709aeb7d41cd,
+        type: 2}
+      propertyPath: m_CharacterLimit
+      value: 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5e3928c2107c41cda92709aeb7d41cd, type: 2}
   m_IsPrefabParent: 0
@@ -671,6 +691,11 @@ Prefab:
       propertyPath: m_FontData.m_Alignment
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114511635998334154, guid: d5e3928c2107c41cda92709aeb7d41cd,
+        type: 2}
+      propertyPath: m_CharacterLimit
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5e3928c2107c41cda92709aeb7d41cd, type: 2}
   m_IsPrefabParent: 0
@@ -774,6 +799,26 @@ Prefab:
     - target: {fileID: 1078765741466628, guid: d5e3928c2107c41cda92709aeb7d41cd, type: 2}
       propertyPath: m_Name
       value: Username Field
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511635998334154, guid: d5e3928c2107c41cda92709aeb7d41cd,
+        type: 2}
+      propertyPath: m_HideMobileInput
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511635998334154, guid: d5e3928c2107c41cda92709aeb7d41cd,
+        type: 2}
+      propertyPath: m_ReadOnly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511635998334154, guid: d5e3928c2107c41cda92709aeb7d41cd,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114511635998334154, guid: d5e3928c2107c41cda92709aeb7d41cd,
+        type: 2}
+      propertyPath: m_CharacterLimit
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5e3928c2107c41cda92709aeb7d41cd, type: 2}
