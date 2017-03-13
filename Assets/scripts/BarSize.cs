@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BarSize : MonoBehaviour {
 
-	public GameObject gaugeInside;
+	public UnityEngine.UI.Text displayText;
 
 	public int maxSize;
 	public int amount;
@@ -26,10 +26,16 @@ public class BarSize : MonoBehaviour {
 	{
 		// calculate amount and move bar
 		float width = (((float)amount / (float)max) * fullLength);
-		print (width);
+		ApplyChanges (width);
+	}
+
+	void ApplyChanges (float width)
+	{
 		// for future reference, these numbers get
 		// multiplied the default width and height
 		// of the GameObject (1, 53)
 		transform.localScale = new Vector2 (width, 1);
+
+		displayText.text = amount + "/" + maxSize;
 	}
 }

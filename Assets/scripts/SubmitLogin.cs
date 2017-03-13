@@ -35,12 +35,11 @@ public class SubmitLogin : MonoBehaviour {
 		SendData ();
 	}
 
-	WWW SendData ()
+	void SendData ()
 	{
 		WWWForm data = new WWWForm();
 		data.AddField("cmd", "{\"id\":1,\"username\":\"" + username + "\",\"password\":\"" + password + "\",\"email\":\"" + email + "\"}");
 		string url = "";
 		WWW www = new WWW(url, data);
-		yield return www;
 	}
 }
