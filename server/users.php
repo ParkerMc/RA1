@@ -65,6 +65,13 @@ function createUser($json){
       VALUES (NULL, '" . htmlspecialchars($json["username"]) . "', '" . htmlspecialchars($json["email"]) . "',
       '" . password_hash(htmlspecialchars($json["password"]), PASSWORD_DEFAULT) . "', '" . htmlspecialchars(getRealIpAddr()) . "')";
       $result = mysqli_query($link, $query) or die('{"success":false, "msg":"Error createing user."}');
+      $query = "SELECT uid from users where username='" . $json["username"] . "'";
+      $result = mysqli_query($link, $query) or die('{"success":false, "msg":"Error createing user."}');
+      $user =  mysqli_fetch_assoc($result);
+      echo "test";
+      $query = 'INSERT INTO villages (uid, food, iron, rock, wood, maxFood, maxIron, maxRock, maxWood, world)
+      VALUES ("' . $user["uid"] . '", 50, 50, 50, 50, 200, 200, 200, 200, \'{"castle":{"x":0,"y":0,"level":1}}\')';
+      $result = mysqli_query($link, $query) or die('{"success":false, "msg":"Error createing user."}');
       login($json);
     }else{
       echo '{"success":false, "msg":"There is already an account with that E-mail."}';
