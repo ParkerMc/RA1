@@ -2,40 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Register : MonoBehaviour {
+public class Login : MonoBehaviour {
 
 	public UnityEngine.UI.Button button;
-	public UnityEngine.UI.Button login;
+	public UnityEngine.UI.Button register;
 
 	public UnityEngine.UI.InputField usernameField;
 	public UnityEngine.UI.InputField passwordField;
-	public UnityEngine.UI.InputField passwordField2;
-	public UnityEngine.UI.InputField emailField;
 
 	// Use this for initialization
 	void Start () {
-		login.onClick.AddListener (() => {
-			Login ();
+		register.onClick.AddListener (() => {
+			Register ();
 		});
 		button.onClick.AddListener (() => {
 			ProcessForm ();
 		});
 	}
 
-	void Login (){
-		UnityEngine.SceneManagement.SceneManager.LoadScene (1);
+	void Register (){
+		UnityEngine.SceneManagement.SceneManager.LoadScene (2);
 	}
 
 	void ProcessForm ()
 	{
-
-		if (passwordField.text == passwordField2.text) {
-			string username = usernameField.text;
-			string password = passwordField.text;
-			string email = emailField.text;
-			Main.server.SendData ("{\"id\":1,\"username\":\"" + username + "\",\"password\":\"" + password + "\",\"email\":\"" + email + "\"}",
-				ProcessResponce);
-		}
+		string username = usernameField.text;
+		string password = passwordField.text;
+		Main.server.SendData ("{\"id\":2,\"username\":\"" + username + "\",\"password\":\"" + password + "\"}",
+			ProcessResponce);
 	}
 
 	void ProcessResponce(JSONObject json){
