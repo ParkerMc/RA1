@@ -11,7 +11,7 @@ public class Loader : MonoBehaviour {
 	}
 
 	public void Play(){
-		Application.LoadLevel(1);
+		UnityEngine.SceneManagement.SceneManager.LoadScene (1);
 	}
 
 }
